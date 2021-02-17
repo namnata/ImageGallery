@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+      <title>My Image Gallery</title>
+</head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+   <link rel="stylesheet" type="text/css" href="style.css" />
+
+<body>
+    <div style="text-align:center">
+    <h1>Lighthouse Photography</h1>
+    <hr>
+
+    <!--The grid for menu: 4 columns-->
+
+    <div class="menu">
+      <div class="column">
+      <a href="index.html">Home</a>
+      </div>
+      <div class="column">
+      <a href="about.html">About</a>
+      </div>
+      <div class="column">
+      <a href="contact.php">Contact Us</a>
+      </div>
+      <div class="column">
+      <a href="price.html">Market</a>
+      </div>
+    </div>
+
+
+
+    <!-- The grid for images: four columns -->
+
+
+
+
+<div class="row">
+
+    <div class="column">
+    <!--Trigger the Modal-->
+    <img id="myImg1" class = "hoverOverPls" src="aarn-giri-9fT545xEwZM-unsplash.jpg" alt="Bird price $2000" onclick="myFunction(1);">
+    </div>
+
+  <div class="column">
+    <img id="myImg2" class = "hoverOverPls" src="alexas_fotos-78Zt_X5VcmU-unsplash.jpg" alt="Bee $2000" onclick="myFunction(2);">
+  </div>
+
+  <div class="column">
+    <img id="myImg3" class = "hoverOverPls" src="dave-hoefler-JZKl9ZjSjWA-unsplash.jpg" alt="Mountains" onclick="myFunction(3);">
+  </div>
+
+  <div class="column">
+    <img id="myImg4" class = "hoverOverPls" src="marek-piwnicki-HTb2aTv2JHs-unsplash.jpg" alt="Mountains" onclick="myFunction(4);">
+  </div>
+
+  <div class="column">
+    <img id="myImg5" class = "hoverOverPls" src="marek-piwnicki-HTb2aTv2JHs-unsplash.jpg" alt="Mountains" onclick="myFunction(5);">
+  </div>
+
+  <div class="column">
+    <img id="myImg6" class = "hoverOverPls" src="malachi-brooks-SfmYPbBigU4-unsplash.jpg" alt="Grass" onclick="myFunction(6);">
+  </div>
+
+   <div class="column">
+    <img id="myImg7" class = "hoverOverPls" src="shivam-baraik-Tm9-XI4k58c-unsplash.jpg" alt="Bird" onclick="myFunction(7);">
+  </div>
+
+  <div class="column">
+    <img id="myImg8" class = "hoverOverPls" src="matthew-t-rader-I8O58UfInLc-unsplash.jpg" alt="Frog" onclick="myFunction(8);">
+  </div>
+
+  <div class="column">
+    <img id="myImg9" class = "hoverOverPls" src="krzysztof-niewolny-sQhYsSsgAqY-unsplash.jpg" alt="Birds" onclick="myFunction(9);">
+  </div>
+
+  <div class="column">
+    <img id="myImg10" class = "hoverOverPls" src="matthew-t-rader-DoUViE7WsJ0-unsplash.jpg" alt="Stars" onclick="myFunction(10);">
+  </div>
+
+  <div class="column">
+    <img id="myImg11" class = "hoverOverPls" src="levi-sun-K7zcQdEKarY-unsplash.jpg" alt="Stars" onclick="myFunction(11);">
+  </div>
+
+   <div class="column">
+    <img id="myImg12" class = "hoverOverPls" src="malachi-brooks-SfmYPbBigU4-unsplash.jpg" alt="Stars" onclick="myFunction(12);">
+  </div>
+</div>
+
+  <!--The Modal-->
+    <div id="myModal" class="modal">
+     <!--The Close Button-->
+    <span class="close">&times;</span>
+    <!--Modal Content-->
+    <img class="modal-content" id="img01">
+    <!--Modal Caption (Image Text)-->
+    <div id="caption"></div>
+   	</div>
+
+
+<script>
+
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+let images = document.getElementsByClassName("hoverOverPls");
+
+for (i = 0; i < images.length; i++){
+  console.log('Natalia '+ i);
+  let index = i+1;
+  var img = images[i]
+  var modalImg = document.getElementById("img01");
+  var captionText = document.getElementById("caption");
+  img.onclick = function()
+  {
+  	modal.style.display = "block";
+ 	modalImg.src = this.src;
+ 	console.log("==>" + this.alt);
+  	captionText.innerHTML = this.alt;
+  }
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+  }
+}
+
+</script>
+
+
+
+<div class="lighthouse">
+
+<a href="index.html"><img src="lighthouse1.png.png" title="Home" width="50px"></a>
+</div>
+
+<hr>
+
+
+<div class="footer">
+
+
+    <a id="icon" href="https://www.youtube.com/" title="Our Youtube channel"><img id="myImg1" src="iconmonstr-youtube-3.svg">
+
+
+    <a id="icon" href="https://www.facebook.com/" title="Our Facebook page"><img id="myImg1" src="iconmonstr-facebook-3.svg">
+
+
+    <a id="icon" href="https://www.twitter.com/" title="Our Twitter"><img id="myImg1" src="iconmonstr-twitter-3 (1).svg">
+
+
+    <a id="icon" href="https://www.instagram.com/" title="Our Instagram profile"><img id="myImg1" src="iconmonstr-instagram-1.svg">
+
+
+</div>
+
+
+
+   </body>
+
+<html>
